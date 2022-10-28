@@ -1,11 +1,6 @@
-function map(mode, lhs,rhs, opts)
-	local options = { noremap = true }
-	if opts then
-		options = vim.tbl_extend("force", options, opts)
-	end
-	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
+local map = vim.api.nvim_set_keymap
+local ns = {noremap=true,silent=false}
 
-map('n', '<c-c>', ':NERDTreeToggle<CR>')
-map('n', '<c-v>', ':FloatermToggle<CR>')
-map('n', '<c-g>', ':GitGutterDiffOrig<CR>')
+map('n', '<TAB>', ':NERDTreeToggle<CR>',ns)
+--map('n', '<c-v>', ':FloatermToggle<CR>',ns)
+--map('n', '<c-g>', ':GitGutterDiffOrig<CR>',ns)

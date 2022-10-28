@@ -1,4 +1,4 @@
 require('plugins')
 require('settings')
-require('themes')
+--require('themes')
 require('keybindings')
